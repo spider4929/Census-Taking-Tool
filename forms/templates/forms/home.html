@@ -1,0 +1,16 @@
+{% extends 'forms/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <form method="POST">
+
+        <div class="form-group">
+            <div class="container p-0 mb-1 border-bottom">
+                <h6>Forms with * are required.</h6>
+            </div>
+            {% csrf_token %}
+            {% crispy form form.helper %}
+        </div>
+
+    </form>
+
+{% endblock %}
