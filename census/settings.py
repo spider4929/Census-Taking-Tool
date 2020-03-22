@@ -25,7 +25,7 @@ SECRET_KEY = 'f#k4lo6)6-q^19g340i$!tas)=e!tx3j#$0%js3v9f#9-=!vs2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['spider4929.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -123,6 +123,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# enable if inside PythonAnywhere
+STATIC_ROOT = '/home/spider4929/OOP-Project/static/'
+# enable if inside local documents
+# STATIC_ROOT = 'C:/Users/Sandrae/Documents/PythonProjects/census/'
 
 LOGIN_REDIRECT_URL = 'forms-home'
 
