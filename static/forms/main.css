@@ -1,0 +1,12 @@
+.container {
+    padding: 15px;
+}
+.container-fluid {
+    padding: 15px;
+}
+.bg-light {
+    background-color: aquamarine;
+}
+.form-group p {
+    margin-bottom: 0.5rem;
+}
