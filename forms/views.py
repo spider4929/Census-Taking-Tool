@@ -41,3 +41,12 @@ def home(request):  # TODO: add error presentation for user if errors pops up
 def about(request):
     return render(request, 'forms/about.html', {'title': 'About'})
 
+
+def search(request):
+    people = Person.objects.all()
+    context = {
+        'title': 'Display',
+        'people': people
+    }
+    return render(request, 'forms/search.html', context)
+

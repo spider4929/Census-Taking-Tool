@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f8a264-2c22-4a5a-ac74-6474439ea1ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/forms/templates/forms/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/templates/forms/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/templates/forms/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forms/templates/forms/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +50,7 @@
   <component name="ProjectId" id="1YhtZwsDk3ixOqyYj11imfGacy4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -52,6 +58,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -123,7 +130,9 @@
       <workItem from="1584858647266" duration="493000" />
       <workItem from="1588198330555" duration="83000" />
       <workItem from="1602737220261" duration="1392000" />
-      <workItem from="1602763213051" duration="1543000" />
+      <workItem from="1602763213051" duration="4383000" />
+      <workItem from="1602823654930" duration="2667000" />
+      <workItem from="1602851180373" duration="3722000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit">
       <created>1584858975361</created>
@@ -139,13 +148,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602763875648</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Second commit">
+      <created>1602764770147</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602764770147</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Second commit" />
     <option name="LAST_COMMIT_MESSAGE" value="Second commit" />
   </component>
@@ -154,17 +171,17 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1602737251255" />
-    <state x="585" y="134" key="CommitChangelistDialog2" timestamp="1602763874785">
+    <state x="585" y="134" key="CommitChangelistDialog2" timestamp="1602764769466">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="585" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1602763874785" />
+    <state x="585" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1602764769466" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1602737711330">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1602737711330" />
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1602763213638">
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1602851180909">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1602763213638" />
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1602851180909" />
   </component>
 </project>
