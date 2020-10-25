@@ -42,6 +42,7 @@ class Person(models.Model):  # TODO: add user accountability
     civil_status = models.CharField(max_length=10, choices=CIVIL_STATUS, help_text='Choose civil status.')  # married, single, divorced, widowed
     citizenship = models.CharField(max_length=10, choices=CITIZENSHIP, help_text='Choose citizenship.')  # Filipino or Foreigner
     occupation = models.CharField(max_length=40, help_text='Enter occupation here.')  # job
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE)  # TODO: do something about the NULL
 
     def __str__(self):
         return self.full_name

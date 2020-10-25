@@ -1,23 +1,37 @@
 {% extends 'forms/base.html' %}
-{% block content %} <!--INSERT TABLES HERE-->
-    <table class="table">
-        <tr>
-            <th>HOUSEHOLD NO.</th>
-            <th>FULL NAME</th>
-            <th>ADDRESS</th>
-            <th>BIRTH DATE</th>
-            <th>CITIZENSHIP</th>
-            <th>OCCUPATION</th>
-        </tr>
-        {% for person in people %}
+{% block content %}
+    <div class="container-fluid">
+        <div>
+            <form method="get">
+                {{ search_filter.form }}
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </div>
+        <table class="table">
             <tr>
-                <td>{{ person.household_no }}</td>
-                <td>{{ person.full_name }}</td>
-                <td>{{ person.address }}</td>
-                <td>{{ person.birth_date }}</td>
-                <td>{{ person.citizenship }}</td>
-                <td>{{ person.occupation }}</td>
+                <th>HOUSEHOLD NO.</th>
+                <th>FULL NAME</th>
+                <th>ADDRESS</th>
+                <th>BIRTH DATE</th>
+                <th>GENDER</th>
+                <th>CIVIL STATUS</th>
+                <th>CITIZENSHIP</th>
+                <th>OCCUPATION</th>
+                <th>ACTIONS</th>
             </tr>
-        {% endfor %}
-    </table>
+            {% for person in people %}
+                <tr>
+                    <td>{{ person.household_no }}</td>
+                    <td>{{ person.full_name }}</td>
+                    <td>{{ person.address }}</td>
+                    <td>{{ person.birth_date }}</td>
+                    <td>{{ person.gender }}</td>
+                    <td>{{ person.civil_status }}</td>
+                    <td>{{ person.citizenship }}</td>
+                    <td>{{ person.occupation }}</td>
+                    <td><a href="{% url 'forms-edit' person.id %}">EDIT</a> <a href="{% url 'forms-delete' person.id %}">DELETE</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
 {% endblock %}
