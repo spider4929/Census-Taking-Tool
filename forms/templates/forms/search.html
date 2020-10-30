@@ -1,9 +1,10 @@
 {% extends 'forms/base.html' %}
+{% load crispy_forms_tags %}
 {% block content %}
     <div class="container-fluid">
         <div>
             <form method="get">
-                {{ search_filter.form }}
+                {{ search_filter.form|crispy }}
                 <button class="btn btn-primary" type="submit">Submit</button>
             </form>
         </div>

@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f8a264-2c22-4a5a-ac74-6474439ea1ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/forms/migrations/0002_person_author.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forms/migrations/0003_auto_20201025_1657.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forms/migrations/0004_auto_20201025_1659.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forms/migrations/0005_auto_20201025_1720.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forms/migrations/0006_auto_20201029_1911.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms/migrations/0001_initial.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forms/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/templates/forms/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,29 @@
       <recent name="C:\Users\Sandrae\Documents\PythonProjects\census\forms\templates\forms" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.manage">
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="census" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../New folder/census" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../New folder/census/manage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="census" type="Python.DjangoServer" factoryName="Django server">
       <module name="census" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -96,6 +117,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.manage" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -142,7 +168,22 @@
       <workItem from="1603262079105" duration="5008000" />
       <workItem from="1603285551093" duration="1688000" />
       <workItem from="1603447295506" duration="665000" />
-      <workItem from="1603606764584" duration="9143000" />
+      <workItem from="1603606764584" duration="9477000" />
+      <workItem from="1603618992405" duration="205000" />
+      <workItem from="1603619393055" duration="607000" />
+      <workItem from="1603803430790" duration="3238000" />
+      <workItem from="1603807031763" duration="1590000" />
+      <workItem from="1603860055875" duration="524000" />
+      <workItem from="1603953960637" duration="1366000" />
+      <workItem from="1603962638891" duration="2107000" />
+      <workItem from="1603965484335" duration="1745000" />
+      <workItem from="1603968135582" duration="451000" />
+      <workItem from="1603969943438" duration="2962000" />
+      <workItem from="1603983944447" duration="811000" />
+      <workItem from="1603984946315" duration="885000" />
+      <workItem from="1603986986518" duration="117000" />
+      <workItem from="1604025990223" duration="1324000" />
+      <workItem from="1604034363527" duration="1699000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit">
       <created>1584858975361</created>
@@ -179,7 +220,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603608873847</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Second commit">
+      <created>1603618557941</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603618557941</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Second commit">
+      <created>1603618598122</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603618598122</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,14 +255,34 @@
     </state>
     <state x="585" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1603618597547" />
     <state x="585" y="134" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1603608873002" />
+    <state width="1877" height="294" key="GridCell.Tab.0.bottom" timestamp="1603979311298">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="294" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1603979311298" />
+    <state width="1877" height="294" key="GridCell.Tab.0.center" timestamp="1603979311298">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="294" key="GridCell.Tab.0.center/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1603979311298" />
+    <state width="1877" height="294" key="GridCell.Tab.0.left" timestamp="1603979311298">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="294" key="GridCell.Tab.0.left/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1603979311298" />
+    <state width="1877" height="294" key="GridCell.Tab.0.right" timestamp="1603979311298">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1877" height="294" key="GridCell.Tab.0.right/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1603979311298" />
     <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1602737711330">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1602737711330" />
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1603606765856">
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1604034363893">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1603447337491" />
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1603606765856" />
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604034363893" />
+    <state x="2576" y="370" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.7.1920.1080@1920.7.1920.1080" timestamp="1603968137699" />
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1603986998979" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/census$manage.coverage" NAME="manage Coverage Results" MODIFIED="1604034925534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../New folder/census" />
   </component>
 </project>

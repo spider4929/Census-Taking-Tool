@@ -1,11 +1,10 @@
 from django.db import models
 from django.core.validators import RegexValidator
 from django.contrib.auth.models import User
-from django.conf import settings
 
 GENDER = (
     ('MALE', 'Male'),
-    ('FEMALE', 'Male'),
+    ('FEMALE', 'Female'),
 )
 CIVIL_STATUS = (
     ('MARRIED', 'Married'),
@@ -25,7 +24,7 @@ NAME_EXTENSION = (
 )
 
 characters = RegexValidator(r'^[a-zA-Z Ññ]*$', message='Only letters are allowed.')
-fullname_characters = RegexValidator(r'^[a-zA-Z Ññ]*$', message='Only letters are allowed.')
+fullname_characters = RegexValidator(r'^[a-zA-Z Ññ ,]*$', message='Only letters are allowed.')
 digits = RegexValidator(r'^[0-99999]*$', message='Only numbers are allowed.')
 
 
@@ -43,7 +42,7 @@ class Person(models.Model):
     civil_status = models.CharField(max_length=9, choices=CIVIL_STATUS, help_text='Choose civil status.')  # married, single, divorced, widowed
     citizenship = models.CharField(max_length=9, choices=CITIZENSHIP, help_text='Choose citizenship.')  # Filipino or Foreigner
     occupation = models.CharField(max_length=40, help_text='Enter occupation here.')  # job
-    author = models.ForeignKey(User, on_delete=models.PROTECT, null=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return self.full_name
