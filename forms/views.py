@@ -29,26 +29,21 @@ def create(request, id=0):  # TODO: add error presentation for user if errors po
 
             if form.is_valid():
                 messages.success(request, f'Form passed successfully!')
-                household_no = form.cleaned_data['household_no']
-                last_name = form.cleaned_data['last_name'].upper()
-                first_name = form.cleaned_data['first_name'].upper()
-                middle_name = form.cleaned_data['middle_name'].upper()
-                name_extension = form.cleaned_data['name_extension'].upper()
-                full_name = f"{last_name}{name_extension}, {first_name} {middle_name}"
-                address = form.cleaned_data['address'].upper()
-                birth_place = form.cleaned_data['birth_place'].upper()
-                birth_date = form.cleaned_data['birth_date']
-                gender = form.cleaned_data['gender']
-                civil_status = form.cleaned_data['civil_status']
-                citizenship = form.cleaned_data['citizenship']
-                occupation = form.cleaned_data['occupation'].upper()
-                author = request.user
-                form_instance = Person(household_no=household_no, last_name=last_name, first_name=first_name,
-                                       middle_name=middle_name, name_extension=name_extension, full_name=full_name,
-                                       address=address, birth_place=birth_place, birth_date=birth_date, gender=gender,
-                                       civil_status=civil_status, citizenship=citizenship, occupation=occupation,
-                                       author=author)
-                form_instance.save()
+                form.household_no = form.cleaned_data['household_no']
+                form.last_name = form.cleaned_data['last_name'].upper()
+                form.first_name = form.cleaned_data['first_name'].upper()
+                form.middle_name = form.cleaned_data['middle_name'].upper()
+                form.name_extension = form.cleaned_data['name_extension'].upper()
+                form.full_name = f"{form.last_name}{form.name_extension}, {form.first_name} {form.middle_name}"
+                form.address = form.cleaned_data['address'].upper()
+                form.birth_place = form.cleaned_data['birth_place'].upper()
+                form.birth_date = form.cleaned_data['birth_date']
+                form.gender = form.cleaned_data['gender']
+                form.civil_status = form.cleaned_data['civil_status']
+                form.citizenship = form.cleaned_data['citizenship']
+                form.occupation = form.cleaned_data['occupation'].upper()
+                form.author = request.user
+                form.save()
 
             else:
                 messages.error(request, f'Person  is already in database. Please try again.')
@@ -60,14 +55,15 @@ def create(request, id=0):  # TODO: add error presentation for user if errors po
 
             if form.is_valid():
                 messages.success(request, f'Form updated successfully!')
-                person.last_name = form.cleaned_data['last_name'].upper()
-                person.first_name = form.cleaned_data['first_name'].upper()
-                person.middle_name = form.cleaned_data['middle_name'].upper()
-                person.name_extension = form.cleaned_data['name_extension'].upper()
-                person.address = form.cleaned_data['address'].upper()
-                person.birth_place = form.cleaned_data['birth_place'].upper()
-                person.occupation = form.cleaned_data['occupation'].upper()
-                person.full_name = f"{person.last_name}{person.name_extension}, {person.first_name} {person.middle_name}"
+                form.last_name = form.cleaned_data['last_name'].upper()
+                form.first_name = form.cleaned_data['first_name'].upper()
+                form.middle_name = form.cleaned_data['middle_name'].upper()
+                form.name_extension = form.cleaned_data['name_extension'].upper()
+                form.address = form.cleaned_data['address'].upper()
+                form.birth_place = form.cleaned_data['birth_place'].upper()
+                form.occupation = form.cleaned_data['occupation'].upper()
+                form.full_name = f"{person.last_name}{person.name_extension}, {person.first_name} {person.middle_name}"
+                form.author = request.user
                 form.save()
                 return redirect('forms-search')
 
