@@ -66,9 +66,58 @@ class Person(models.Model):
     address = models.CharField(max_length=100, help_text='Enter house no. and street no.')  # house no. and street name only
     birth_place = models.CharField(max_length=20, help_text='Enter city of birth only.')  # birth place, typically a city
     birth_date = models.DateField()  # birth date
+<<<<<<< Updated upstream
     gender = models.ForeignKey(Gender, on_delete=models.PROTECT, choices=GENDER, help_text='Choose gender.')  # gender, male or female
     civil_status = models.ForeignKey(CivilStatus, on_delete=models.PROTECT, choices=CIVIL_STATUS, help_text='Choose civil status.')  # married, single, divorced, widowed
     citizenship = models.ForeignKey(Citizenship, on_delete=models.PROTECT, choices=CITIZENSHIP, help_text='Choose citizenship.')  # Filipino or Foreigner
+=======
+    gender = models.CharField(max_length=6, choices=GENDER, help_text='Choose gender.')  # gender, male or female
+    civil_status = models.CharField(max_length=10, choices=CIVIL_STATUS, help_text='Choose civil status.')  # married, single, divorced, widowed
+    citizenship = models.CharField(max_length=10, choices=CITIZENSHIP, help_text='Choose citizenship.')  # Filipino or Foreigner
+=======
+class Gender(models.Model):
+    gender = models.CharField(max_length=6)  # gender, male or female
+
+    def __str__(self):
+        return self.gender
+
+
+class NameExtension(models.Model):
+    name_extension = models.CharField(max_length=4)  # name extensions (Sr., Jr., III, IV, etc.)
+
+    def __str__(self):
+        return self.name_extension
+
+
+class CivilStatus(models.Model):
+    civil_status = models.CharField(max_length=9)  # married, single, separated, widowed
+
+    def __str__(self):
+        return self.civil_status
+
+
+class Citizenship(models.Model):
+    citizenship = models.CharField(max_length=9)  # Filipino or Foreigner
+
+    def __str__(self):
+        return self.citizenship
+
+
+class Person(models.Model):
+    household_no = models.SmallIntegerField(help_text='Enter household number here.')
+    full_name = models.CharField(max_length=240, unique=True, validators=[fullname_characters])  # full name, formatted like so {{Surname} {Extension}, {First Name} {Middle Name}}
+    last_name = models.CharField(max_length=128, help_text='Enter surname here.', validators=[characters])  # surname
+    first_name = models.CharField(max_length=128, help_text='Enter first name here.', validators=[characters])  # first name
+    middle_name = models.CharField(max_length=64, blank=True, help_text='Enter middle name here.', validators=[characters])  # middle name
+    name_extension = models.ForeignKey(NameExtension, on_delete=models.PROTECT, blank=True, help_text='Choose name extension, if required.', default=5)  # name extensions (Sr., Jr., III, IV, etc.)
+    address = models.CharField(max_length=100, help_text='Enter house no. and street no.')  # house no. and street name only
+    birth_place = models.CharField(max_length=20, help_text='Enter city of birth only.')  # birth place, typically a city
+    birth_date = models.DateField()  # birth date
+    gender = models.ForeignKey(Gender, on_delete=models.PROTECT, help_text='Choose gender.', null=True)  # gender, male or female
+    civil_status = models.ForeignKey(CivilStatus, on_delete=models.PROTECT, help_text='Choose civil status.', null=True)  # married, single, divorced, widowed
+    citizenship = models.ForeignKey(Citizenship, on_delete=models.PROTECT, help_text='Choose citizenship.', null=True)  # Filipino or Foreigner
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     occupation = models.CharField(max_length=40, help_text='Enter occupation here.')  # job
     author = models.ForeignKey(User, on_delete=models.PROTECT, null=True)
 
