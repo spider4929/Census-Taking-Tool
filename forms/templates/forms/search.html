@@ -22,9 +22,9 @@
             </tr>
             {% for person in people %}
                 <tr>
-                    <td>{{ person.household_no }}</td>
+                    <td>{{ person.household_no.household_no }}</td>
                     <td><a href="{% url 'forms-specify' person.id %}">{{ person.full_name }}</a></td>
-                    <td>{{ person.address }}</td>
+                    <td>{{ person.household_no.address }}</td>
                     <td>{{ person.birth_date }}</td>
                     <td>{{ person.gender }}</td>
                     <td>{{ person.civil_status }}</td>

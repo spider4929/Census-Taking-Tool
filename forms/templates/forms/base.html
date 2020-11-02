@@ -28,7 +28,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
 
-                        {% if user.is_authenticated %}
+                        {% if user.is_superuser %}
                             <li class="nav-item active">
                                 <a class="nav-link" href="{% url 'forms-create' %}">Insert <span class="sr-only">(current)</span></a>
                             </li>
@@ -37,25 +37,25 @@
                             </li>
                             <li class="nav-item active">
                                 <a class="nav-link" href="{% url 'forms-about' %}">About <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item active ">
-                                <a class="nav-link" href="{% url 'logout' %}">Logout <span class="sr-only">(current)</span></a>
-                            </li>
-                        {% elif user.is_superuser %}
-                            <li class="nav-item active">
-                                <a class="nav-link" href="{% url 'forms-create' %}">Insert <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="{% url 'forms-search' %}">Search <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="{% url 'forms-about' %}">About <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item active ">
-                                <a class="nav-link" href="{% url 'logout' %}">Logout <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item active ">
                                 <a class="nav-link" href="{% url 'admin:index' %}">Admin <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active ">
+                                <a class="nav-link" href="{% url 'logout' %}">Logout <span class="sr-only">(current)</span></a>
+                            </li>
+                        {% elif user.is_authenticated %}
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'forms-create' %}">Insert <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'forms-search' %}">Search <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'forms-about' %}">About <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active ">
+                                <a class="nav-link" href="{% url 'logout' %}">Logout <span class="sr-only">(current)</span></a>
                             </li>
                         {% else %}
                             <li class="nav-item active ">

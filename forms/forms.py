@@ -1,6 +1,5 @@
 from django import forms
-from .models import Person
-from crispy_forms.helper import FormHelper
+from .models import Person, Household
 from django.utils.translation import gettext_lazy as _
 from crispy_forms.layout import Layout, Submit
 
@@ -9,10 +8,16 @@ class DateInput(forms.DateInput):
     input_type = 'date'
 
 
+class HouseholdForm(forms.ModelForm):
+    class Meta:
+        model = Household
+        fields = {'household_no', 'address'}
+
+
 class PersonForm(forms.ModelForm):
     class Meta:
         model = Person
-        fields = {'household_no', 'last_name', 'first_name', 'middle_name', 'name_extension', 'address', 'birth_place', 'birth_date',
+        fields = {'household_no', 'last_name', 'first_name', 'middle_name', 'name_extension', 'birth_place', 'birth_date',
                   'gender', 'civil_status', 'citizenship', 'occupation'}
         widgets = {
             'birth_date': DateInput(),

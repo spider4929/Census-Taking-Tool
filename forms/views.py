@@ -16,6 +16,7 @@ def home(request):
 
     return render(request, 'forms/home.html', context)
 
+
 @login_required
 def create(request, id=0):  # TODO: add error presentation for user if errors pops up
     if request.method == 'GET':
@@ -40,7 +41,6 @@ def create(request, id=0):  # TODO: add error presentation for user if errors po
                     full_name = f"{last_name}, {first_name} {middle_name}"
                 else:
                     full_name = f"{last_name}{name_extension}, {first_name} {middle_name}"
-                address = form.cleaned_data['address'].upper()
                 birth_place = form.cleaned_data['birth_place'].upper()
                 birth_date = form.cleaned_data['birth_date']
                 gender = form.cleaned_data['gender']
@@ -49,7 +49,7 @@ def create(request, id=0):  # TODO: add error presentation for user if errors po
                 occupation = form.cleaned_data['occupation'].upper()
                 author = request.user
                 instance = Person(household_no=household_no, full_name=full_name, last_name=last_name, first_name=first_name,
-                                  middle_name=middle_name, name_extension=name_extension, address=address, birth_place=birth_place,
+                                  middle_name=middle_name, name_extension=name_extension, birth_place=birth_place,
                                   birth_date=birth_date, gender=gender, civil_status=civil_status, citizenship=citizenship,
                                   occupation=occupation, author=author)
                 instance.save()
@@ -68,7 +68,6 @@ def create(request, id=0):  # TODO: add error presentation for user if errors po
                 person.first_name = form.cleaned_data['first_name'].upper()
                 person.middle_name = form.cleaned_data['middle_name'].upper()
                 person.name_extension = form.cleaned_data['name_extension']
-                person.address = form.cleaned_data['address'].upper()
                 person.birth_place = form.cleaned_data['birth_place'].upper()
                 person.occupation = form.cleaned_data['occupation'].upper()
                 if person.name_extension.name_extension == 'None':
