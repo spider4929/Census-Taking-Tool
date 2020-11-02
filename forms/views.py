@@ -8,8 +8,10 @@ from django.contrib import messages
 
 @login_required
 def home(request):
+    user = request.user
     context = {
-        'title': 'Home'
+        'title': 'Home',
+        'user': user
     }
 
     return render(request, 'forms/home.html', context)
@@ -112,6 +114,18 @@ def search(request):
     }
 
     return render(request, 'forms/search.html', context)
+
+
+@login_required
+def specify(request, id):
+    person = Person.objects.get(id=id)
+
+    context = {
+        'title': 'Specify',
+        'person': person
+    }
+
+    return render(request, 'forms/specify.html', context=context)
 
 
 @login_required

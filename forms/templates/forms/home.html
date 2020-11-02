@@ -1,6 +1,9 @@
 {% extends 'forms/base.html' %}
+{% load static  %}
 {% block content %}
-    <div class="container">
-        <h1>Under Construction</h1>
+    <div class="container" style="text-align: center">
+        <h1>Welcome! {{ user.username }}</h1>
+        <img class="animated fadeInDown" src="{% static "forms/logo.png" %}" alt="sta lucia logo"
+        style="height: 500px">
     </div>
 {% endblock %}
