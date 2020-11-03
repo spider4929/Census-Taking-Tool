@@ -1,8 +1,8 @@
 {% extends 'forms/base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <div class="container-fluid">
-        <div>
+    <div class="container">
+        <div class="pb-3">
             <form method="get">
                 {{ search_filter.form|crispy }}
                 <button class="btn btn-primary" type="submit">Submit</button>
@@ -13,10 +13,7 @@
                 <th>HOUSEHOLD NO.</th>
                 <th>FULL NAME</th>
                 <th>ADDRESS</th>
-                <th>BIRTH DATE</th>
                 <th>GENDER</th>
-                <th>CIVIL STATUS</th>
-                <th>CITIZENSHIP</th>
                 <th>OCCUPATION</th>
                 <th>ACTIONS</th>
             </tr>
@@ -25,12 +22,9 @@
                     <td>{{ person.household_no.household_no }}</td>
                     <td><a href="{% url 'forms-specify' person.id %}">{{ person.full_name }}</a></td>
                     <td>{{ person.household_no.address }}</td>
-                    <td>{{ person.birth_date }}</td>
                     <td>{{ person.gender }}</td>
-                    <td>{{ person.civil_status }}</td>
-                    <td>{{ person.citizenship }}</td>
                     <td>{{ person.occupation }}</td>
-                    <td><a href="{% url 'forms-edit' person.id %}">EDIT</a> <a href="{% url 'forms-delete' person.id %}">DELETE</a></td>
+                    <td><a href="{% url 'forms-edit-person' person.id %}">EDIT</a> <a href="{% url 'forms-delete' person.id %}">DELETE</a></td>
                 </tr>
             {% endfor %}
         </table>

@@ -11,7 +11,7 @@ class DateInput(forms.DateInput):
 class HouseholdForm(forms.ModelForm):
     class Meta:
         model = Household
-        fields = {'household_no', 'address'}
+        fields = {'household_no', 'name', 'address'}
 
 
 class PersonForm(forms.ModelForm):

@@ -2,8 +2,8 @@
 {% load static  %}
 {% block content %}
     <div class="container" style="text-align: center">
-        <h1>Welcome! {{ user.username }}</h1>
-        <img class="animated fadeInDown" src="{% static "forms/logo.png" %}" alt="sta lucia logo"
+        <h1 class="border-bottom pb-3">Welcome! {{ user.username }}</h1>
+        <img class="pt-3" src="{% static "forms/logo.png" %}" alt="sta lucia logo"
         style="height: 500px">
     </div>
 {% endblock %}
