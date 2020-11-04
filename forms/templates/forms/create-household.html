@@ -12,7 +12,11 @@
                     <h6>Fields with * are required.</h6>
                 </div>
                 {% csrf_token %}
-                {{ form|crispy }}
+                <div class="row">
+                    <div class="col-md-2">{{ form.household_no|as_crispy_field }}</div>
+                    <div class="col-md-10">{{ form.name|as_crispy_field }}</div>
+                </div>
+                {{ form.address|as_crispy_field }}
             </div>
             <button class="btn btn-success" type="submit">Submit</button>
         </form>

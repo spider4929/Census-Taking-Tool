@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f8a264-2c22-4a5a-ac74-6474439ea1ae" name="Default Changelist" comment="Second commit">
-      <change afterPath="$PROJECT_DIR$/forms/templates/forms/create-household.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/forms/templates/forms/create-person.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forms/migrations/0002_household_author.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forms/templates/forms/edit-person.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/templates/forms/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/templates/forms/create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/templates/forms/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/census/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/census/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/templates/forms/create-household.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/create-household.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/templates/forms/edit.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/forms/templates/forms/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forms/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forms/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms/views.py" afterDir="false" />
@@ -193,7 +193,9 @@
       <workItem from="1604323907011" duration="56000" />
       <workItem from="1604326164088" duration="4991000" />
       <workItem from="1604337462519" duration="6737000" />
-      <workItem from="1604401253749" duration="2789000" />
+      <workItem from="1604401253749" duration="8051000" />
+      <workItem from="1604482368027" duration="1895000" />
+      <workItem from="1604486330140" duration="500000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit">
       <created>1584858975361</created>
@@ -293,16 +295,21 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="92" y="92" width="1736" height="896" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604173577090" />
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1604401263058">
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1604486773054">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604401263058" />
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604486773054" />
     <state x="2576" y="370" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.7.1920.1080@1920.7.1920.1080" timestamp="1603968137699" />
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1603986998979" />
-    <state x="1913" y="7" width="974" height="1087" key="dock-window-1" timestamp="1604342415164">
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1604482374338" />
+    <state x="1913" y="7" width="974" height="1087" key="dock-window-1" timestamp="1604486907546">
       <screen x="1920" y="7" width="1920" height="1080" />
     </state>
-    <state x="1913" y="7" width="974" height="1087" key="dock-window-1/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604342415164" />
+    <state x="1913" y="7" width="974" height="1087" key="dock-window-1/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604486907546" />
+    <state x="953" y="0" width="974" height="1087" key="dock-window-2" timestamp="1604486360632">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="953" y="0" width="974" height="1087" key="dock-window-2/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604486360632" />
+    <state x="953" y="0" width="974" height="1087" key="dock-window-2/0.0.1920.1080@0.0.1920.1080" timestamp="1604482399482" />
     <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1604344895853">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

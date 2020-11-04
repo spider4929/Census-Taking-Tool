@@ -130,9 +130,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # enable if inside PythonAnywhere
-STATIC_ROOT = '/home/spider4929/OOP-Project/static/'
+# STATIC_ROOT = '/home/spider4929/OOP-Project/static/'
 # enable if inside local documents
-# STATIC_ROOT = 'C:/Users/Sandrae/Documents/PythonProjects/census/'
+STATIC_ROOT = 'C:/Users/Sandrae/Documents/PythonProjects/census/'
 
 LOGIN_REDIRECT_URL = 'forms-home'
 

@@ -60,18 +60,19 @@ class Household(models.Model):
     household_no = models.SmallIntegerField(help_text='Enter household number here.', primary_key=True)
     name = models.CharField(max_length=50, help_text='Enter a name for the household.')
     address = models.CharField(max_length=100, help_text='Enter house no. and street no.')  # house no. and street name only
+    author = models.ForeignKey(User, on_delete=models.PROTECT, null=True)
 
     def __str__(self):
         return f'{self.household_no}. {self.name} household'
 
 
 class Person(models.Model):
-    household_no = models.ForeignKey(Household, on_delete=models.CASCADE, help_text='Enter household number here.', null=True)
+    household_no = models.ForeignKey(Household, on_delete=models.CASCADE, help_text='Choose household where person belong to.', null=True)
     full_name = models.CharField(max_length=240, unique=True, validators=[fullname_characters])  # full name, formatted like so {{Surname} {Extension}, {First Name} {Middle Name}}
     last_name = models.CharField(max_length=128, help_text='Enter surname here.', validators=[characters])  # surname
     first_name = models.CharField(max_length=128, help_text='Enter first name here.', validators=[characters])  # first name
-    middle_name = models.CharField(max_length=64, blank=True, help_text='Enter middle name here.', validators=[characters])  # middle name
-    name_extension = models.ForeignKey(NameExtension, on_delete=models.PROTECT, blank=True, help_text='Choose name extension, if required.', default=5)  # name extensions (Sr., Jr., III, IV, etc.)
+    middle_name = models.CharField(max_length=64, blank=True, help_text='Enter middle name here, if needed.', validators=[characters])  # middle name
+    name_extension = models.ForeignKey(NameExtension, on_delete=models.PROTECT, blank=True, help_text='Choose name extension, if needed.', default=5)  # name extensions (Sr., Jr., III, IV, etc.)
     birth_place = models.CharField(max_length=20, help_text='Enter city of birth only.')  # birth place, typically a city
     birth_date = models.DateField()  # birth date
     gender = models.ForeignKey(Gender, on_delete=models.PROTECT, help_text='Choose gender.', null=True)  # gender, male or female
