@@ -89,7 +89,8 @@ def edit_person(request, id):
             return redirect('forms-edit-person')
 
     else:
-        form = PersonForm()
+        person = Person.objects.get(id=id)
+        form = PersonForm(instance=person)
 
     context = {
         'title': 'Update Person',
@@ -155,14 +156,15 @@ def edit_household(request, id):
             return redirect('forms-create-household')
 
     else:
-        form = HouseholdForm()
+        household = Household.objects.get(household_no=id)
+        form = HouseholdForm(instance=household)
 
     context = {
         'title': 'Update Household',
         'form': form
     }
 
-    return render(request, 'forms/create-household.html', context)
+    return render(request, 'forms/edit-household.html', context)
 
 
 @login_required
