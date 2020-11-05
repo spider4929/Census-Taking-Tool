@@ -33,7 +33,7 @@ def create_person(request):
             if name_extension.name_extension == 'None':
                 full_name = f"{last_name}, {first_name} {middle_name}"
             else:
-                full_name = f"{last_name}{name_extension}, {first_name} {middle_name}"
+                full_name = f"{last_name} {name_extension}, {first_name} {middle_name}"
             birth_place = form.cleaned_data['birth_place'].upper()
             birth_date = form.cleaned_data['birth_date']
             gender = form.cleaned_data['gender']
@@ -79,10 +79,11 @@ def edit_person(request, id):
             if person.name_extension.name_extension == 'None':
                 person.full_name = f"{person.last_name}, {person.first_name} {person.middle_name}"
             else:
-                person.full_name = f"{person.last_name}{person.name_extension}, {person.first_name} {person.middle_name}"
+                person.full_name = f"{person.last_name} {person.name_extension}, {person.first_name} {person.middle_name}"
             person.author = request.user
             person.save()
             form.save()
+            return redirect('forms-search')
 
         else:
             messages.error(request, f'No edits were made or the Person is already in database. Please try again.')

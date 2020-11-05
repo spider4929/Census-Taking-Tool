@@ -1,9 +1,8 @@
 {% extends 'forms/base.html' %}
 {% load static  %}
 {% block content %}
+    <p id="name" class="border-bottom pb-3">Welcome, {{ user.first_name }} {{ user.last_name }}!</p>
     <div class="container" style="text-align: center">
-        <h1 class="border-bottom pb-3">Welcome! {{ user.username }}</h1>
-        <img class="pt-3" src="{% static "forms/logo.png" %}" alt="sta lucia logo"
-        style="height: 500px">
+        <img src="{% static "forms/logo.png" %}" alt="sta lucia logo">
     </div>
 {% endblock %}

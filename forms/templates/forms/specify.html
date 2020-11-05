@@ -1,5 +1,6 @@
 {% extends 'forms/base.html' %}
 {% block content %}
+    <p class="title-header">Details of {{ person.full_name }}</p>
     <div class="container">
         <p><b>Household No.: </b>{{ person.household_no.household_no }}</p>
         <p><b>Full Name: </b>{{ person.full_name }}</p>
@@ -16,6 +17,6 @@
         <p><b>Civil Status: </b>{{ person.civil_status }}</p>
         <p><b>Citizenship: </b>{{ person.citizenship }}</p>
         <p><b>Occupation: </b>{{ person.occupation }}</p>
-        <p><b>Author: </b>{{ person.author.username }}</p>
+        <p><b>Author/Most Current Editor: </b>{{ person.author.username }}</p>
     </div>
 {% endblock %}
