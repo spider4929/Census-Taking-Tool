@@ -48,7 +48,7 @@ def create_person(request):
             instance.save()
 
         else:
-            messages.error(request, f'Person  is already in database. Please try again.')
+            messages.success(request, f'Person  is already in database. Please try again.')
             return redirect('forms-create-person')
 
     else:
@@ -64,49 +64,57 @@ def create_person(request):
 
 @login_required
 def edit_person(request, id):
-    if request.method == 'POST':
-        person = Person.objects.get(id=id)
-        form = PersonForm(request.POST, instance=person)
+    person = Person.objects.get(id=id)
+    if person.author_id == request.user.id or request.user.is_superuser == 1:
+        if request.method == 'POST':
+            form = PersonForm(request.POST, instance=person)
 
-        if form.is_valid():
-            messages.success(request, f'Entry edited successfully!')
-            person.last_name = form.cleaned_data['last_name'].upper()
-            person.first_name = form.cleaned_data['first_name'].upper()
-            person.middle_name = form.cleaned_data['middle_name'].upper()
-            person.name_extension = form.cleaned_data['name_extension']
-            person.birth_place = form.cleaned_data['birth_place'].upper()
-            person.occupation = form.cleaned_data['occupation'].upper()
-            if person.name_extension.name_extension == 'None':
-                person.full_name = f"{person.last_name}, {person.first_name} {person.middle_name}"
+            if form.is_valid():
+                messages.success(request, f'Entry edited successfully!')
+                person.last_name = form.cleaned_data['last_name'].upper()
+                person.first_name = form.cleaned_data['first_name'].upper()
+                person.middle_name = form.cleaned_data['middle_name'].upper()
+                person.name_extension = form.cleaned_data['name_extension']
+                person.birth_place = form.cleaned_data['birth_place'].upper()
+                person.occupation = form.cleaned_data['occupation'].upper()
+                if person.name_extension.name_extension == 'None':
+                    person.full_name = f"{person.last_name}, {person.first_name} {person.middle_name}"
+                else:
+                    person.full_name = f"{person.last_name} {person.name_extension}, {person.first_name} {person.middle_name}"
+                person.author = request.user
+                person.save()
+                form.save()
+                return redirect('forms-search')
+
             else:
-                person.full_name = f"{person.last_name} {person.name_extension}, {person.first_name} {person.middle_name}"
-            person.author = request.user
-            person.save()
-            form.save()
-            return redirect('forms-search')
+                messages.success(request, f'No edits were made or the Person is already in database. Please try again.')
+                return redirect('forms-edit-person')
 
-        else:
-            messages.error(request, f'No edits were made or the Person is already in database. Please try again.')
-            return redirect('forms-edit-person')
+        else:  # GET request
+            person = Person.objects.get(id=id)
+            form = PersonForm(instance=person)
 
+        context = {
+            'title': 'Update Person',
+            'form': form
+        }
+
+        return render(request, 'forms/edit-person.html', context)
     else:
-        person = Person.objects.get(id=id)
-        form = PersonForm(instance=person)
-
-    context = {
-        'title': 'Update Person',
-        'form': form
-    }
-
-    return render(request, 'forms/edit-person.html', context)
+        messages.success(request, f'You cannot edit an entry that you did not create.')
+        return redirect('forms-search')
 
 
 @login_required
 def delete_person(request, id):
     person = Person.objects.get(id=id)
-    person.delete()
-    messages.success(request, f'Entry deleted successfully!')
-    return redirect('forms-search')
+    if person.author_id == request.user.id or request.user.is_superuser == 1:
+        person.delete()
+        messages.success(request, f'Entry deleted successfully!')
+        return redirect('forms-search')
+    else:
+        messages.success(request, f'You cannot delete an entry that you did not create.')
+        return redirect('forms-search')
 
 
 # CRUD FOR Household model
@@ -125,7 +133,7 @@ def create_household(request):
             instance.save()
 
         else:
-            messages.error(request, f'Household is already in database. Please try again.')
+            messages.success(request, f'Household is already in database. Please try again.')
             return redirect('forms-create-household')
 
     else:
@@ -141,45 +149,53 @@ def create_household(request):
 
 @login_required
 def edit_household(request, id):
-    if request.method == 'POST':
-        household = Household.objects.get(household_no=id)
-        form = HouseholdForm(request.POST, instance=household)
+    household = Household.objects.get(household_no=id)
+    if household.author_id == request.user.id or request.user.is_superuser == 1:
+        if request.method == 'POST':
+            form = HouseholdForm(request.POST, instance=household)
 
-        if form.is_valid():
-            messages.success(request, f'Entry edited successfully!')
-            household.household_no = form.cleaned_data['household_no']
-            household.name = form.cleaned_data['name'].upper()
-            household.address = form.cleaned_data['address'].upper()
-            household.save()
+            if form.is_valid():
+                messages.success(request, f'Entry edited successfully!')
+                household.household_no = form.cleaned_data['household_no']
+                household.name = form.cleaned_data['name'].upper()
+                household.address = form.cleaned_data['address'].upper()
+                household.save()
+
+            else:
+                messages.success(request, f'No edits were made or the Household is already in database. Please try again.')
+                return redirect('forms-create-household')
 
         else:
-            messages.error(request, f'No edits were made or the Household is already in database. Please try again.')
-            return redirect('forms-create-household')
+            household = Household.objects.get(household_no=id)
+            form = HouseholdForm(instance=household)
 
+        context = {
+            'title': 'Update Household',
+            'form': form
+        }
+
+        return render(request, 'forms/edit-household.html', context)
     else:
-        household = Household.objects.get(household_no=id)
-        form = HouseholdForm(instance=household)
-
-    context = {
-        'title': 'Update Household',
-        'form': form
-    }
-
-    return render(request, 'forms/edit-household.html', context)
+        messages.success(request, f'You cannot edit an entry that you did not create.')
+        return redirect('forms-search')
 
 
 @login_required
 def delete_household(request, id):
     household = Household.objects.get(household_no=id)
-    household.delete()
-    messages.success(request, f'Entry deleted successfully!')
-    return redirect('forms-search')
+    if household.author_id == request.user.id or request.user.is_superuser == 1:
+        household.delete()
+        messages.success(request, f'Entry deleted successfully!')
+        return redirect('forms-search')
+    else:
+        messages.success(request, f'You cannot delete an entry that you did not create.')
+        return redirect('forms-search')
 
 
 @login_required
 def search(request):
-    people = Person.objects.all()
-    households = Household.objects.all()
+    people = Person.objects.all().order_by('household_no')
+    households = Household.objects.all().order_by('household_no')
 
     search_filter = PersonFilter(request.GET, queryset=people)
     people = search_filter.qs

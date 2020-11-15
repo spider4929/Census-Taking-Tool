@@ -2,24 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34f8a264-2c22-4a5a-ac74-6474439ea1ae" name="Default Changelist" comment="Second commit">
-      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forms/migrations/0002_auto_20201111_0501.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forms/migrations/0003_auto_20201111_0511.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/census/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/census/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/migrations/0002_household_author.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/static/forms/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/forms/static/forms/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forms/templates/forms/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forms/templates/forms/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/templates/forms/create-household.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/create-household.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/templates/forms/create-person.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/create-person.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/templates/forms/edit-household.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/edit-household.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/templates/forms/edit-person.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/edit-person.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/templates/forms/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forms/templates/forms/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/templates/forms/specify.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/specify.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forms/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/logout.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +29,12 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
@@ -209,6 +206,18 @@
       <workItem from="1604529579016" duration="2802000" />
       <workItem from="1604553681089" duration="1866000" />
       <workItem from="1604586750813" duration="656000" />
+      <workItem from="1604587425090" duration="427000" />
+      <workItem from="1604617890547" duration="222000" />
+      <workItem from="1604672688388" duration="131000" />
+      <workItem from="1604811442883" duration="650000" />
+      <workItem from="1604848894864" duration="636000" />
+      <workItem from="1604916499327" duration="1279000" />
+      <workItem from="1604964530277" duration="1457000" />
+      <workItem from="1604998941642" duration="2184000" />
+      <workItem from="1605041123222" duration="2316000" />
+      <workItem from="1605058293966" duration="1955000" />
+      <workItem from="1605106712020" duration="101000" />
+      <workItem from="1605402163944" duration="371000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit">
       <created>1584858975361</created>
@@ -300,20 +309,20 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1877" height="294" key="GridCell.Tab.0.right/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604529609378" />
-    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1602737711330">
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1605058308226">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1602737711330" />
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1605058308226" />
     <state x="92" y="92" width="1736" height="896" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1604173577090">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="92" y="92" width="1736" height="896" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604173577090" />
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1604587441164">
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1605402175206">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604587441164" />
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1605402175206" />
     <state x="2576" y="370" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.7.1920.1080@1920.7.1920.1080" timestamp="1603968137699" />
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1604482374338" />
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1605041125321" />
     <state x="972" y="257" width="974" height="1087" key="dock-window-1" timestamp="1604507500229">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
