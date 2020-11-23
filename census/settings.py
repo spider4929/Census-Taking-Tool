@@ -25,7 +25,7 @@ SECRET_KEY = 'f#k4lo6)6-q^19g340i$!tas)=e!tx3j#$0%js3v9f#9-=!vs2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['spider4929.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'forms',
     'users',
     'crispy_forms',
+    'django_filters',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -78,12 +79,24 @@ WSGI_APPLICATION = 'census.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# Enable if trying to connect to MySQL Database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'djangodatabase',
+        'USER': 'user',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',
+        'PORT': '3307',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 
 # Password validation
@@ -123,6 +136,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# enable if inside PythonAnywhere
+# STATIC_ROOT = '/home/spider4929/OOP-Project/static/'
+# enable if inside local documents
+STATIC_ROOT = 'C:/Users/Sandrae/Documents/PythonProjects/census/'
 
 LOGIN_REDIRECT_URL = 'forms-home'
 

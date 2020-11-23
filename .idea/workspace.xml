@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34f8a264-2c22-4a5a-ac74-6474439ea1ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="34f8a264-2c22-4a5a-ac74-6474439ea1ae" name="Default Changelist" comment="Second commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/census/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/census/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forms/templates/forms/specify.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/specify.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +22,12 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="db" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
@@ -45,9 +48,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
+  <component name="JupyterTrust" id="efb7e169-5aa8-4387-8613-8bc70dd8dfaa" />
   <component name="ProjectId" id="1YhtZwsDk3ixOqyYj11imfGacy4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -55,6 +60,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -67,7 +73,29 @@
       <recent name="C:\Users\Sandrae\Documents\PythonProjects\census\forms\templates\forms" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.manage">
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="census" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../New folder/census" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../New folder/census/manage.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="census" type="Python.DjangoServer" factoryName="Django server">
       <module name="census" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -92,6 +120,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.manage" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -122,78 +155,187 @@
       <workItem from="1584615842118" duration="627000" />
       <workItem from="1584622983241" duration="1345000" />
       <workItem from="1584673441565" duration="904000" />
-      <workItem from="1584851769382" duration="2697000" />
+      <workItem from="1584851769382" duration="3128000" />
+      <workItem from="1584858647266" duration="493000" />
+      <workItem from="1588198330555" duration="83000" />
+      <workItem from="1602737220261" duration="1392000" />
+      <workItem from="1602763213051" duration="4383000" />
+      <workItem from="1602823654930" duration="2667000" />
+      <workItem from="1602851180373" duration="4344000" />
+      <workItem from="1602871567317" duration="1881000" />
+      <workItem from="1602873518373" duration="1631000" />
+      <workItem from="1602884490547" duration="5092000" />
+      <workItem from="1602941269194" duration="995000" />
+      <workItem from="1603094778148" duration="278000" />
+      <workItem from="1603190899550" duration="10931000" />
+      <workItem from="1603262079105" duration="5008000" />
+      <workItem from="1603285551093" duration="1688000" />
+      <workItem from="1603447295506" duration="665000" />
+      <workItem from="1603606764584" duration="9477000" />
+      <workItem from="1603618992405" duration="205000" />
+      <workItem from="1603619393055" duration="607000" />
+      <workItem from="1603803430790" duration="3238000" />
+      <workItem from="1603807031763" duration="1590000" />
+      <workItem from="1603860055875" duration="524000" />
+      <workItem from="1603953960637" duration="1366000" />
+      <workItem from="1603962638891" duration="2107000" />
+      <workItem from="1603965484335" duration="1745000" />
+      <workItem from="1603968135582" duration="451000" />
+      <workItem from="1603969943438" duration="2962000" />
+      <workItem from="1603983944447" duration="811000" />
+      <workItem from="1603984946315" duration="885000" />
+      <workItem from="1603986986518" duration="117000" />
+      <workItem from="1604025990223" duration="1324000" />
+      <workItem from="1604034363527" duration="4848000" />
+      <workItem from="1604173376728" duration="768000" />
+      <workItem from="1604323907011" duration="56000" />
+      <workItem from="1604326164088" duration="4991000" />
+      <workItem from="1604337462519" duration="6737000" />
+      <workItem from="1604401253749" duration="8051000" />
+      <workItem from="1604482368027" duration="1895000" />
+      <workItem from="1604486330140" duration="2747000" />
+      <workItem from="1604507478262" duration="3944000" />
+      <workItem from="1604511606214" duration="112000" />
+      <workItem from="1604529579016" duration="2802000" />
+      <workItem from="1604553681089" duration="1866000" />
+      <workItem from="1604586750813" duration="656000" />
+      <workItem from="1604587425090" duration="427000" />
+      <workItem from="1604617890547" duration="222000" />
+      <workItem from="1604672688388" duration="131000" />
+      <workItem from="1604811442883" duration="650000" />
+      <workItem from="1604848894864" duration="636000" />
+      <workItem from="1604916499327" duration="1279000" />
+      <workItem from="1604964530277" duration="1457000" />
+      <workItem from="1604998941642" duration="2184000" />
+      <workItem from="1605041123222" duration="2316000" />
+      <workItem from="1605058293966" duration="1955000" />
+      <workItem from="1605106712020" duration="101000" />
+      <workItem from="1605402163944" duration="404000" />
+      <workItem from="1605444670428" duration="24000" />
+      <workItem from="1605444708975" duration="162000" />
+      <workItem from="1605444956458" duration="598000" />
+      <workItem from="1605489570762" duration="609000" />
+      <workItem from="1605494260660" duration="2642000" />
     </task>
+    <task id="LOCAL-00001" summary="Second commit">
+      <created>1584858975361</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584858975361</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Second commit">
+      <created>1602763875648</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602763875648</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Second commit">
+      <created>1602764770147</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602764770147</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Second commit">
+      <created>1602855055493</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602855055493</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Second commit">
+      <created>1603608873847</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603608873847</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Second commit">
+      <created>1603618557941</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603618557941</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Second commit">
+      <created>1603618598122</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603618598122</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="198" key="#Inspections" timestamp="1583406892792">
+    <state x="552" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602737251255">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="198" key="#Inspections/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583406892792" />
-    <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584858184213">
+    <state x="552" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1602737251255" />
+    <state x="585" y="134" key="CommitChangelistDialog2" timestamp="1604587515210">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="414" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584858184213" />
-    <state x="585" y="134" key="CommitChangelistDialog2" timestamp="1584858177450">
+    <state x="585" y="134" key="CommitChangelistDialog2/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604587515210" />
+    <state x="585" y="134" key="CommitChangelistDialog2/0.0.1920.1080@0.0.1920.1080" timestamp="1603608873002" />
+    <state x="92" y="92" width="1736" height="896" key="DiffContextDialog" timestamp="1604173577090">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="585" y="134" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584858177450" />
-    <state x="739" y="295" key="FileChooserDialogImpl" timestamp="1583630451739">
+    <state x="92" y="92" width="1736" height="896" key="DiffContextDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604173577090" />
+    <state width="1877" height="294" key="GridCell.Tab.0.bottom" timestamp="1604529609378">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="739" y="295" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583630451739" />
-    <state width="1877" height="294" key="GridCell.Tab.0.bottom" timestamp="1584858050497">
+    <state width="1877" height="294" key="GridCell.Tab.0.bottom/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604529609378" />
+    <state width="1877" height="294" key="GridCell.Tab.0.center" timestamp="1604529609378">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584858050497" />
-    <state width="1877" height="295" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1583819451566" />
-    <state width="1877" height="294" key="GridCell.Tab.0.center" timestamp="1584858050497">
+    <state width="1877" height="294" key="GridCell.Tab.0.center/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604529609378" />
+    <state width="1877" height="294" key="GridCell.Tab.0.left" timestamp="1604529609378">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584858050497" />
-    <state width="1877" height="295" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1583819451566" />
-    <state width="1877" height="294" key="GridCell.Tab.0.left" timestamp="1584858050497">
+    <state width="1877" height="294" key="GridCell.Tab.0.left/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604529609378" />
+    <state width="1877" height="294" key="GridCell.Tab.0.right" timestamp="1604529609378">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584858050497" />
-    <state width="1877" height="295" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1583819451566" />
-    <state width="1877" height="294" key="GridCell.Tab.0.right" timestamp="1584858050497">
+    <state width="1877" height="294" key="GridCell.Tab.0.right/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604529609378" />
+    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1605058308226">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="294" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584858050497" />
-    <state width="1877" height="295" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1583819451566" />
-    <state width="196" height="457" key="HiddenNamespacesPopup" timestamp="1583551439831">
+    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1605058308226" />
+    <state x="92" y="92" width="1736" height="896" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1604173577090">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="196" height="457" key="HiddenNamespacesPopup/0.0.1920.1080@0.0.1920.1080" timestamp="1583551439831" />
-    <state x="461" y="182" key="SettingsEditor" timestamp="1583406912304">
+    <state x="92" y="92" width="1736" height="896" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604173577090" />
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1605494270032">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="461" y="182" key="SettingsEditor/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583406912304" />
-    <state x="656" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1584851770703">
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1605494270032" />
+    <state x="2576" y="370" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.7.1920.1080@1920.7.1920.1080" timestamp="1603968137699" />
+    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1605041125321" />
+    <state x="972" y="257" width="974" height="1087" key="dock-window-1" timestamp="1604507500229">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="656" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1583551421214" />
-    <state x="656" y="364" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584851770703" />
-    <state x="2576" y="364" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.0.1920.1080@1920.0.1920.1080" timestamp="1583816042429" />
-    <state x="769" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584858124724">
+    <state x="972" y="257" width="974" height="1087" key="dock-window-1/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604507500229" />
+    <state x="1913" y="7" width="974" height="1087" key="dock-window-2" timestamp="1604488027554">
+      <screen x="1920" y="7" width="1920" height="1080" />
+    </state>
+    <state x="1913" y="7" width="974" height="1087" key="dock-window-2/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604488027554" />
+    <state x="953" y="0" width="974" height="1087" key="dock-window-2/0.0.1920.1080@0.0.1920.1080" timestamp="1604482399482" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1604344895853">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="769" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1584858124724" />
-    <state x="1468" y="0" width="459" height="1087" key="dock-window-1" timestamp="1583411714472">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="1468" y="0" width="459" height="1087" key="dock-window-1/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583411714472" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1583562686388">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583562686388" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604344895853" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/census$manage.coverage" NAME="manage Coverage Results" MODIFIED="1604529603752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../New folder/census" />
   </component>
 </project>

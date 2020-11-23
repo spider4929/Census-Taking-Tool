@@ -1,0 +1,22 @@
+{% extends 'forms/base.html' %}
+{% block content %}
+    <p class="title-header">Details of {{ person.full_name }}</p>
+    <div class="container">
+        <p><b>Household No.: </b>{{ person.household_no.household_no }}</p>
+        <p><b>Full Name: </b>{{ person.full_name }}</p>
+        <div class="row">
+            <div class="col-md-3"><p><b>Last Name: </b>{{ person.last_name }}</p></div>
+            <div class="col-md-3"><p><b>Name Extension: </b>{{ person.name_extension }}</p></div>
+            <div class="col-md-3"><p><b>First Name: </b>{{ person.first_name }}</p></div>
+            <div class="col-md-3"><p><b>Middle Name: </b>{{ person.middle_name }}</p></div>
+        </div>
+        <p><b>Address: </b>{{ person.household_no.address }}</p>
+        <p><b>Birth Place: </b>{{ person.birth_place }}</p>
+        <p><b>Birth Date: </b>{{ person.birth_date }}</p>
+        <p><b>Gender: </b>{{ person.gender }}</p>
+        <p><b>Civil Status: </b>{{ person.civil_status }}</p>
+        <p><b>Citizenship: </b>{{ person.citizenship }}</p>
+        <p><b>Occupation: </b>{{ person.occupation }}</p>
+        <p><b>Created by: </b>{{ person.author.username }}</p>
+    </div>
+{% endblock %}

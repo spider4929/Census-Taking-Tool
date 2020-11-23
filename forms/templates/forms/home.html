@@ -1,16 +1,8 @@
 {% extends 'forms/base.html' %}
-{% load crispy_forms_tags %}
+{% load static  %}
 {% block content %}
-    <form method="POST">
-
-        <div class="form-group">
-            <div class="container p-0 mb-1 border-bottom">
-                <h6>Forms with * are required.</h6>
-            </div>
-            {% csrf_token %}
-            {% crispy form form.helper %}
-        </div>
-
-    </form>
-
+    <p id="name" class="border-bottom pb-3">Welcome, {{ user.first_name }} {{ user.last_name }}!</p>
+    <div class="container" style="text-align: center">
+        <img src="{% static "forms/logo.png" %}" alt="sta lucia logo">
+    </div>
 {% endblock %}

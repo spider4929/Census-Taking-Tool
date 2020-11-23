@@ -1,0 +1,53 @@
+{% extends 'forms/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <p class="title-header">Search Records</p>
+    <div class="container-fluid p-10">
+        <div class="pb-3">
+            <form method="GET">
+                {{ search_filter.form|crispy }}
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-xl" style="width: 100%">
+                <table class="table">
+                    <tr>
+                        <th>HOUSEHOLD NO.</th>
+                        <th>FULL NAME</th>
+                        <th>GENDER</th>
+                        <th>OCCUPATION</th>
+                        <th>ACTIONS</th>
+                    </tr>
+                    {% for person in people %}
+                    <tr>
+                        <td>{{ person.household_no.household_no }}</td>
+                        <td><a href="{% url 'forms-specify' person.id %}">{{ person.full_name }}</a></td>
+                        <td>{{ person.gender }}</td>
+                        <td>{{ person.occupation }}</td>
+                        <td><a href="{% url 'forms-edit-person' person.id %}"><i class="material-icons">edit</i></a> <a href="{% url 'forms-delete-person' person.id %}"><i class="material-icons">delete</i></a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+            </div>
+            <div class="col-xl" style="width: 100%">
+                <table class="table">
+                    <tr>
+                        <th>HOUSEHOLD NO.</th>
+                        <th>HOUSEHOLD NAME</th>
+                        <th>ADDRESS</th>
+                        <th>ACTIONS</th>
+                    </tr>
+                    {% for household in households %}
+                        <tr>
+                            <td>{{ household.household_no }}</td>
+                            <td>{{ household.name }}</td>
+                            <td>{{ household.address }}</td>
+                            <td><a href="{% url 'forms-edit-household' household.household_no %}"><i class="material-icons">edit</i></a> <a href="{% url 'forms-delete-household' household.household_no %}"><i class="material-icons">delete</i></a></td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
