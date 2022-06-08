@@ -1,0 +1,331 @@
+{% extends 'forms/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <p class="title-header">Analytics</p>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <canvas id="gender_pie_chart"></canvas>
+            </div>
+            <div class="col">
+                <canvas id="civil_pie_chart"></canvas>
+            </div>
+            <div class="col">
+                <canvas id="citizen_pie_chart"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <canvas id="age_bar_chart"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <canvas id="job_bar_chart"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <canvas id="street_bar_chart"></canvas>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <!-- Script for Gender pie chart -->
+    <script>
+        const data = {
+            labels: [{% for gender in gender_list %} '{{ gender }}', {% endfor %}],
+            datasets: [{
+            label: 'Gender',
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 135, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(151, 102, 132, 1)',
+                'rgba(153, 99, 132, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 135, 1)',
+                'rgba(25, 206, 86, 1)',
+                'rgba(211, 192, 192, 1)',
+                'rgba(234, 102, 132, 1)',
+                'rgba(153, 99, 132, 1)',
+                'rgba(255, 159, 64, 1)',
+                'gree',
+                'yellow',
+            ],
+            data: [{% for number in gender_no %} '{{ number }}', {% endfor %}],
+            }]
+        };
+    
+        const config = {
+            type: 'pie',
+            data: data,
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Gender Distribution'
+                    }
+                }
+            }
+        };
+        
+        const myChart = new Chart(
+            document.getElementById('gender_pie_chart'),
+            config 
+        );
+    </script>
+
+    <!-- Script for Civil Status pie chart -->
+    <script>
+        const data_2 = {
+            labels: [{% for civil in civil_list %} '{{ civil }}', {% endfor %}],
+            datasets: [{
+            label: 'Civil Status',
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 135, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(151, 102, 132, 1)',
+                'rgba(153, 99, 132, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 135, 1)',
+                'rgba(25, 206, 86, 1)',
+                'rgba(211, 192, 192, 1)',
+                'rgba(234, 102, 132, 1)',
+                'rgba(153, 99, 132, 1)',
+                'rgba(255, 159, 64, 1)',
+                'gree',
+                'yellow',
+            ],
+            data: [{% for number in civil_no %} '{{ number }}', {% endfor %}],
+            }]
+        };
+    
+        const config_2 = {
+            type: 'pie',
+            data: data_2,
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Civil Status Distribution'
+                    }
+                }
+            }
+        };
+        
+        const myChart_2 = new Chart(
+            document.getElementById('civil_pie_chart'),
+            config_2 
+        );
+    </script>
+
+    <!-- Script for Citizenship pie chart -->
+    <script>
+        const data_3 = {
+            labels: [{% for citizen in citizen_list %} '{{ citizen }}', {% endfor %}],
+            datasets: [{
+            label: 'Citizenship',
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 135, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(151, 102, 132, 1)',
+                'rgba(153, 99, 132, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 135, 1)',
+                'rgba(25, 206, 86, 1)',
+                'rgba(211, 192, 192, 1)',
+                'rgba(234, 102, 132, 1)',
+                'rgba(153, 99, 132, 1)',
+                'rgba(255, 159, 64, 1)',
+                'gree',
+                'yellow',
+            ],
+            data: [{% for number in citizen_no %} '{{ number }}', {% endfor %}],
+            }]
+        };
+    
+        const config_3 = {
+            type: 'pie',
+            data: data_3,
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Citizenship Distribution'
+                    }
+                }
+            }
+        };
+        
+        const myChart_3 = new Chart(
+            document.getElementById('citizen_pie_chart'),
+            config_3 
+        );
+    </script>
+
+    <!-- Script for Age Distribution bar chart -->
+    <script>
+        const data_4 = {
+            labels: [{% for age in age_list %} '{{ age }}', {% endfor %}],
+            datasets: [{
+                label: 'Number',
+                backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 135, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(151, 102, 132, 1)',
+                    'rgba(153, 99, 132, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 135, 1)',
+                    'rgba(25, 206, 86, 1)',
+                    'rgba(211, 192, 192, 1)',
+                    'rgba(234, 102, 132, 1)',
+                    'rgba(153, 99, 132, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'gree',
+                    'yellow',
+                ],
+                data: [{% for number in age_no %} '{{ number }}', {% endfor %}],
+            }]
+        };
+    
+        const config_4 = {
+            type: 'bar',
+            data: data_4,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Age Distribution'
+                    }
+                }
+            }
+        };
+        
+        const myChart_4 = new Chart(
+            document.getElementById('age_bar_chart'),
+            config_4 
+        );
+    </script>
+
+    <!-- Script for Job Distribution bar chart -->
+    <script>
+        const data_5 = {
+            labels: [{% for job in job_list %} '{{ job }}', {% endfor %}],
+            datasets: [{
+                label: 'Number',
+                backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 135, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(151, 102, 132, 1)',
+                    'rgba(153, 99, 132, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 135, 1)',
+                    'rgba(25, 206, 86, 1)',
+                    'rgba(211, 192, 192, 1)',
+                    'rgba(234, 102, 132, 1)',
+                    'rgba(153, 99, 132, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'gree',
+                    'yellow',
+                ],
+                data: [{% for number in job_no %} '{{ number }}', {% endfor %}],
+            }]
+        };
+    
+        const config_5 = {
+            type: 'bar',
+            data: data_5,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Job Distribution'
+                    }
+                }
+            }
+        };
+        
+        const myChart_5 = new Chart(
+            document.getElementById('job_bar_chart'),
+            config_5 
+        );
+    </script>
+
+    <!-- Script for Street Distribution bar chart -->
+    <script>
+        const data_6 = {
+            labels: [{% for street in street_list %} '{{ street }}', {% endfor %}],
+            datasets: [{
+                label: 'Number',
+                backgroundColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 135, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(151, 102, 132, 1)',
+                    'rgba(153, 99, 132, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 135, 1)',
+                    'rgba(25, 206, 86, 1)',
+                    'rgba(211, 192, 192, 1)',
+                    'rgba(234, 102, 132, 1)',
+                    'rgba(153, 99, 132, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'gree',
+                    'yellow',
+                ],
+                data: [{% for number in street_no %} '{{ number }}', {% endfor %}],
+            }]
+        };
+    
+        const config_6 = {
+            type: 'bar',
+            data: data_6,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Street Residence Distribution'
+                    }
+                }
+            }
+        };
+        
+        const myChart_6 = new Chart(
+            document.getElementById('street_bar_chart'),
+            config_6 
+        );
+    </script>
+{% endblock %}
