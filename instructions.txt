@@ -1,0 +1,13 @@
+Pip install these packages:
+django
+django-crispy-forms
+django-filter
+
+To run the website, run the command on the command line:
+	python manage.py runserver
+on the directory where the manage.py file is located.
+
+Account to use to access website:
+Username: admin
+Password: admin
+

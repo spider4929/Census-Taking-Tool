@@ -4,7 +4,6 @@
     <list default="true" id="34f8a264-2c22-4a5a-ac74-6474439ea1ae" name="Default Changelist" comment="Second commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/census/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/census/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forms/templates/forms/specify.html" beforeDir="false" afterPath="$PROJECT_DIR$/forms/templates/forms/specify.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,9 +212,6 @@
       <workItem from="1605402163944" duration="404000" />
       <workItem from="1605444670428" duration="24000" />
       <workItem from="1605444708975" duration="162000" />
-      <workItem from="1605444956458" duration="598000" />
-      <workItem from="1605489570762" duration="609000" />
-      <workItem from="1605494260660" duration="2642000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit">
       <created>1584858975361</created>
@@ -315,10 +311,6 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="92" y="92" width="1736" height="896" key="com.intellij.dvcs.ui.CompareBranchesDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1604173577090" />
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog" timestamp="1605494270032">
-      <screen x="0" y="0" width="1920" height="1080" />
-    </state>
-    <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.7.1920.1080@0.0.1920.1080" timestamp="1605494270032" />
     <state x="2576" y="370" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/1920.7.1920.1080@1920.7.1920.1080" timestamp="1603968137699" />
     <state x="656" y="363" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1605041125321" />
     <state x="972" y="257" width="974" height="1087" key="dock-window-1" timestamp="1604507500229">
